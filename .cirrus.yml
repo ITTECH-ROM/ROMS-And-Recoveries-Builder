@@ -17,8 +17,8 @@ task:
        - sudo apt update -y && sudo apt install git aria2 curl wget rsync zip unzip lzma cpio ccache clang -y
        - sudo apt install python3 -y
        - sudo ln -sf /usr/bin/python3 /usr/bin/python
-       - git config --global user.name "example"
-       - git config --global user.email "example@example.com"
+       - git config --global user.name "nguyenhung9xdev2024"
+       - git config --global user.email "nguyenhung9xdev2024@gmail.com"
        - git clone https://github.com/akhilnarang/scripts.git ~/scripts
        - cd ~/scripts
        - sudo bash setup/android_build_env.sh
@@ -47,12 +47,12 @@ task:
       - echo "Starting the Build..."
       - echo "============================"
       - cd ~/fox_12.1
-      - git clone https://github.com/mrx7014/android_device_samsung_a23 device/samsung/a23
+      - git clone https://github.com/nguyenhung9xdev2022/android_device_samsung_a73xq -b fox-12.1 device/samsung/a73xq
       - source build/envsetup.sh
       - export ALLOW_MISSING_DEPENDENCIES=true
       - export FOX_BUILD_DEVICE=<device>
       - export LC_ALL="C"
-      - lunch omni_a23-eng && mka recoveryimage
+      - lunch omni_a73xq-eng && mka recoveryimage
   Upload_script:
       - echo "============================"
       - echo "Uploading the Build..."
